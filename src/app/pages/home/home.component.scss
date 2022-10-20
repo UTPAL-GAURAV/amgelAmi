@@ -1,0 +1,65 @@
+.example-container {
+    width: 99.8%;
+    height: 91%;
+    margin: 2px;
+    border: 1px solid #555;
+    display: flex;
+  }
+  
+  .sub-left-container {
+      width: 28%;
+      height: 100%;
+      display: flex;
+  }
+  
+  .sub-right-container {
+      width: 72%;
+      height: 100%;
+      float: right;
+      display: flex;
+      background-color: #f1f1f1;
+  }
+
+  .messageArea {
+    width: 90%;
+    height: 60%;
+    max-height: 400px;
+    margin-left: 5%;
+    margin-top: 3%;
+    display: flex;
+    position: absolute; 
+    background-image:url('../../../assets/men_bg.jpg');
+    background-size: cover;
+  }
+
+  .messageTextArea {
+    width: 90%;
+    height: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    display: flex;
+    position: absolute;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    overflow-wrap: normal;
+    overflow-y:hidden;
+  }
+
+  .formMessage {
+    display: flex;
+    position: absolute;
+    margin-top: 48%;
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  .msgTextArea {
+    width: 65%;
+    height: 60px;
+  }
+
+  .btnTextArea {
+    height: 30px;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');

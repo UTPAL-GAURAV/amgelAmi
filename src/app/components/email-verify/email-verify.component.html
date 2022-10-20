@@ -1,0 +1,14 @@
+<p>We have sent your Angel name to your email.</p>
+<h1 class="text-center">What's the Angel Name?</h1>
+<form (ngSubmit)="formVerifyAngel()">
+    <!-- Angel Name -->
+    <mat-form-field appearance="legacy" class="form-feilds">
+        <mat-label>Angel Name</mat-label>
+        <input matInput matInput [(ngModel)]="angel.angelName" name="angelName" placeholder="Eg: AngelName" required>
+    </mat-form-field>
+
+    <!-- Buttons -->
+    <div class="container text-center">
+        <button type="submit" mat-raised-button color="primary" class="form-feilds">Verify</button>
+    </div>
+</form>

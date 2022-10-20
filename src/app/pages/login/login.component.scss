@@ -1,0 +1,33 @@
+.example-container {
+  width: 99.8%;
+  height: 91%;
+  margin: 2px;
+  border: 1px solid #555;
+}
+
+.sub-left-container {
+    width: 62%;
+    height: 100%;
+}
+
+.sub-right-container {
+    width: 38%;
+    height: 100%;
+    float: right;
+    background-color: #f1f1f1;
+}
+
+.form-feilds {
+    margin-left: 10%;
+    width: 80%;
+    max-width: 400px;
+    font-size: small;
+}
+
+.form-feilds-select {
+    font-size: small;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }

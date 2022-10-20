@@ -1,0 +1,91 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer class="sub-left-container" mode="side" opened>Drawer content</mat-drawer>
+
+    <mat-drawer-content class="sub-right-container">
+
+        <mat-tab-group>
+            <mat-tab label="Login"> 
+                <h1 class="text-center">Login Here !!</h1>
+                <form (ngSubmit)="formLoginSubmit()">
+                    <!-- Email id -->
+                    <mat-form-field appearance="legacy" class="form-feilds">
+                        <mat-label>Email id</mat-label>
+                        <input matInput [(ngModel)]="loginUser.emailid" name="email" type="email" placeholder="Eg: John03@gmail.com" required>
+                    </mat-form-field>
+                    
+                    <!-- Password -->
+                    <mat-form-field appearance="legacy" class="form-feilds">
+                        <mat-label>Password</mat-label>
+                        <input matInput [(ngModel)]="loginUser.password" name="password" type="password" placeholder="Password" required>
+                    </mat-form-field>
+
+                    <!-- Buttons -->
+                        <button type="submit" mat-raised-button color="primary" class="form-feilds">Login</button>
+                </form>
+            </mat-tab>
+
+            <mat-tab label="Signup"> 
+                <!-- <h3 class="text-center">Signup Here !!</h3> --> <br/>
+                <form (ngSubmit)="formSignupSubmit()">
+                    <!-- Email id -->
+                    <mat-form-field appearance="legacy" class="form-feilds">
+                        <mat-label>Email id</mat-label>
+                        <input matInput [(ngModel)]="user.emailid" name="email" type="email" placeholder="Eg: John03@gmail.com" required>
+                        <mat-hint>Angel name will be sent to verify this mail</mat-hint>
+                    </mat-form-field>
+
+                    <!-- Full Name -->
+                    <mat-form-field appearance="legacy" class="form-feilds">
+                        <mat-label>Full Name</mat-label>
+                        <input matInput [(ngModel)]="user.name" name="fullname" placeholder="Eg: John Rickman" required>
+                    </mat-form-field>
+
+                    <!-- Gender -->
+                    <br><br>
+                    <mat-radio-group [(ngModel)]="user.gender" aria-label="Select an option" name="gender" class="form-feilds">
+                        <mat-radio-button value=true>Male</mat-radio-button>
+                        <mat-radio-button value=false>Female</mat-radio-button>
+                    </mat-radio-group> <br><br><br>
+                    
+                    
+                    <!-- Language -->
+                    <mat-form-field matInput appearance="fill" class="form-feilds">
+                        <mat-label>Language*</mat-label>
+                        <mat-select [(ngModel)]="user.language" name="language" class="form-feilds-select">
+                          <mat-option *ngFor="let language of languages" [value]="language.value">
+                            {{language.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <!-- Country -->
+                    <mat-form-field matInput appearance="fill" class="form-feilds">
+                        <mat-label>Country*</mat-label>
+                        <mat-select [(ngModel)]="user.country" name="country" class="form-feilds-select">
+                          <mat-option *ngFor="let country of countries" [value]="country.value">
+                            {{country.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <!-- Password -->
+                    <mat-form-field appearance="legacy" class="form-feilds">
+                        <mat-label>Password</mat-label>
+                        <input matInput [(ngModel)]="user.password" name="password" type="password" placeholder="Password" required>
+                    </mat-form-field>
+
+                    <!-- Confirm Password -->
+                    <mat-form-field appearance="legacy" class="form-feilds">
+                        <mat-label>Confirm Password</mat-label>
+                        <input matInput [(ngModel)]="user.confirmPassword" name="confirmPassword" type="Password" placeholder="Password" required>
+                    </mat-form-field>
+
+                    <!-- Buttons -->
+                        <button type="submit" mat-raised-button color="primary" class="form-feilds">Signup</button>
+                </form>
+            </mat-tab>
+
+          </mat-tab-group>
+
+    </mat-drawer-content>
+</mat-drawer-container>

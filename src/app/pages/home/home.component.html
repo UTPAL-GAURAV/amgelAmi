@@ -1,0 +1,14 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer class="sub-left-container" mode="side" opened>Menu content</mat-drawer>
+
+    <mat-drawer-content class="sub-right-container">
+        <div class="messageArea">
+            <div class="messageTextArea" style="white-space: pre-line">{{postMessage.message}}</div>
+        </div>
+        <form class="formMessage">
+            <label>Your Message: </label>
+            <textarea matInput [(ngModel)]="postMessage.message" name="message" class="msgTextArea" maxlength="600"></textarea>
+            <button type="submit" class="btnTextArea">Send with Angel</button>
+        </form>
+    </mat-drawer-content>
+</mat-drawer-container>
